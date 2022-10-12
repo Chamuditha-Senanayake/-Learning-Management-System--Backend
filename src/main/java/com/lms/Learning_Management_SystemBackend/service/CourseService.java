@@ -1,7 +1,7 @@
 package com.lms.Learning_Management_SystemBackend.service;
 
 import com.lms.Learning_Management_SystemBackend.dto.CourseDTO;
-import com.lms.Learning_Management_SystemBackend.entity.Course;
+import com.lms.Learning_Management_SystemBackend.model.Course;
 import com.lms.Learning_Management_SystemBackend.repo.CourseRepo;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
