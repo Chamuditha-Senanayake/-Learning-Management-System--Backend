@@ -1,7 +1,7 @@
 package com.lms.Learning_Management_SystemBackend.service;
 
 import com.lms.Learning_Management_SystemBackend.dto.LecturerDTO;
-import com.lms.Learning_Management_SystemBackend.entity.Lecturer;
+import com.lms.Learning_Management_SystemBackend.model.Lecturer;
 import com.lms.Learning_Management_SystemBackend.repo.LecturerRepo;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
