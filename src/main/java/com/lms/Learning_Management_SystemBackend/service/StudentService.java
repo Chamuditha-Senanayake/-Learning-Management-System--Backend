@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.List;
 
+
 @Service
 @Transactional
 public class StudentService {
@@ -23,7 +24,11 @@ public class StudentService {
     private ModelMapper modelMapper;
 
     public StudentDTO saveStudent(StudentDTO studentDTO){
-        studentRepo.save(modelMapper.map(studentDTO, Student.class));
+//       String id= studentRepo.findTopByOrderByStudentIdDesc();
+//       int stdID= Integer.parseInt(id.substring(4));
+//       studentDTO.setStudentId("EMP-"+(stdID+1));
+        Student ss = studentRepo.save(modelMapper.map(studentDTO, Student.class));
+        System.out.println(ss);
         return studentDTO;
     }
 
