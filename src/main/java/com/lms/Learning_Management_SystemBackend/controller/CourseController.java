@@ -1,6 +1,7 @@
 package com.lms.Learning_Management_SystemBackend.controller;
 
 import com.lms.Learning_Management_SystemBackend.dto.CourseDTO;
+import com.lms.Learning_Management_SystemBackend.model.Course;
 import com.lms.Learning_Management_SystemBackend.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

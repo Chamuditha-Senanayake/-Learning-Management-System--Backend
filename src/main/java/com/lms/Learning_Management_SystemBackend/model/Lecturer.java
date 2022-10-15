@@ -2,10 +2,8 @@ package com.lms.Learning_Management_SystemBackend.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
@@ -14,16 +12,16 @@ import java.util.Set;
 @Data
 @ToString
 
-public class Lecturer {
+public class Lecturer implements Serializable {
     @Id @GeneratedValue
     private int id;
+    private String lecturerId;
+
+    @OneToOne
+    @JoinColumn(name="user_id", referencedColumnName = "id")
+    private User userLecturer;
 
     @OneToMany(mappedBy = "lecturer")
     private Set<Course> course;
 
-    private String lecturerId;
-    private String password;
-    private String name;
-    private String email;
-    private String state;
 }
