@@ -27,6 +27,7 @@ public class CourseService {
     }
 
     public List<CourseDTO> getAllCourses(){
+//        return courseRepo.findAll();
         List<Course> courseList = courseRepo.findAll();
         return modelMapper.map(courseList, new TypeToken<List<CourseDTO>>(){}.getType());
     }

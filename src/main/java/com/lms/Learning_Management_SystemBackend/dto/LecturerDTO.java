@@ -1,5 +1,6 @@
 package com.lms.Learning_Management_SystemBackend.dto;
 
+import com.lms.Learning_Management_SystemBackend.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,8 +11,5 @@ import lombok.NoArgsConstructor;
 public class LecturerDTO {
     private int id;
     private String lecturerId;
-    private String password;
-    private String name;
-    private String email;
-    private String state;
+    private User userLecturer;
 }
