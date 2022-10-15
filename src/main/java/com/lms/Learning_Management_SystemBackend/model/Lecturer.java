@@ -12,6 +12,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@ToString
 
 public class Lecturer {
     @Id @GeneratedValue
