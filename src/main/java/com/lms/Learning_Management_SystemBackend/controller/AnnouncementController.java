@@ -26,4 +26,16 @@ public class AnnouncementController {
     public AnnouncementDTO saveAnnouncement(@RequestBody AnnouncementDTO announcementDTO){
         return announcementService.saveAnnouncement(announcementDTO);
     }
+
+    @PutMapping("/updateAnnouncement/{id}")
+    public AnnouncementDTO updateAnnouncement(@PathVariable int id, @RequestBody AnnouncementDTO announcementDTO){
+        return announcementService.updateAnnouncement(id, announcementDTO);
+    }
+
+    @DeleteMapping("/deleteAnnouncement/{id}")
+    public List<AnnouncementDTO>  updateAnnouncement(@PathVariable int id){
+         announcementService.deleteAnnouncement(id);
+         return getAllAnnouncement();
+    }
+
 }

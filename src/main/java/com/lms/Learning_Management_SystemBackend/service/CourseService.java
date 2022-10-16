@@ -31,4 +31,9 @@ public class CourseService {
         List<Course> courseList = courseRepo.findAll();
         return modelMapper.map(courseList, new TypeToken<List<CourseDTO>>(){}.getType());
     }
+
+
+    public Course getCourseByCourseId(String courseId){
+        return courseRepo.getCourseByCourseId(courseId);
+    }
 }

@@ -4,7 +4,6 @@ import com.lms.Learning_Management_SystemBackend.dto.LecturerDTO;
 import com.lms.Learning_Management_SystemBackend.dto.StudentDTO;
 import com.lms.Learning_Management_SystemBackend.dto.UserDTO;
 import com.lms.Learning_Management_SystemBackend.model.User;
-import com.lms.Learning_Management_SystemBackend.repo.StudentRepo;
 import com.lms.Learning_Management_SystemBackend.repo.UserRepo;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

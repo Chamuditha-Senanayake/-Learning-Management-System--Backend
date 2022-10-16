@@ -1,18 +1,18 @@
 package com.lms.Learning_Management_SystemBackend.model;
 
-
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Announcement {
+public class Announcement implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue
     private int id;
     private String updated_date;
     private String title;
@@ -21,6 +21,6 @@ public class Announcement {
 
     @JoinColumn(name = "course_id", referencedColumnName = "courseId")
     @ManyToOne
-    private Course courses;
+    private Course course;
 
 }

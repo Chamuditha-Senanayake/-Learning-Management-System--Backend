@@ -14,5 +14,6 @@ public class AnnouncementDTO {
     private String title;
     private String description;
     private String state;
-    private Course courses;
+    private String courseId;
+  // private Course courses;
 }

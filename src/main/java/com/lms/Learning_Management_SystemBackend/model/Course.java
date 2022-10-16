@@ -22,10 +22,10 @@ public class Course implements Serializable {
     @ManyToOne
     private Lecturer lecturer;
 
-    @OneToMany(mappedBy= "courses")
+    @OneToMany(mappedBy= "course")
     private Set<Announcement> announcement;
 
-    @OneToMany(mappedBy = "course")
+    @OneToMany(mappedBy = "courses")
     private Set<Enrolment> enrolment;
 
 
