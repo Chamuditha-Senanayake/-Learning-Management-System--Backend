@@ -2,6 +2,7 @@ package com.lms.Learning_Management_SystemBackend.dto;
 
 import com.lms.Learning_Management_SystemBackend.model.Course;
 import com.lms.Learning_Management_SystemBackend.model.Student;
+import com.lms.Learning_Management_SystemBackend.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,9 +13,9 @@ import lombok.NoArgsConstructor;
 @Data
 public class EnrolmentDTO {
     private int id;
-    private Course course;
     private String state;
     private int marks;
-    private Student student;
     private String note;
+    private String coursesId;
+    private int userId;
 }

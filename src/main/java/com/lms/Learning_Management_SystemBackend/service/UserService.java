@@ -3,6 +3,7 @@ package com.lms.Learning_Management_SystemBackend.service;
 import com.lms.Learning_Management_SystemBackend.dto.LecturerDTO;
 import com.lms.Learning_Management_SystemBackend.dto.StudentDTO;
 import com.lms.Learning_Management_SystemBackend.dto.UserDTO;
+import com.lms.Learning_Management_SystemBackend.model.Course;
 import com.lms.Learning_Management_SystemBackend.model.User;
 import com.lms.Learning_Management_SystemBackend.repo.UserRepo;
 import org.modelmapper.ModelMapper;
@@ -31,6 +32,7 @@ public class UserService {
     public UserDTO getUserByEmailAndPassword(String email,String password){
         User user = userRepo.findUserByEmailAndPassword(email,password);
         System.out.println("hdond");
+        user.setLecturer(null);
         return modelMapper.map(user,UserDTO.class);
     }
     public UserDTO saveUser(UserDTO userDTO){
@@ -50,4 +52,9 @@ public class UserService {
 
         return userDTO;
     }
+
+    public User getUserById(int userId){
+        return userRepo.getUserById(userId);
+    }
 }
+

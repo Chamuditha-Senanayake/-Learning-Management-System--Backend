@@ -25,4 +25,9 @@ public class CourseController {
     public CourseDTO saveCourse(@RequestBody CourseDTO courseDTO){
         return courseService.saveCourse(courseDTO);
     }
+
+    @GetMapping("/getCourse/{courseId}")
+    public Course getCourseById(@PathVariable("courseId") String courseId){
+        return courseService.getCourseByCourseId(courseId);
+    }
 }

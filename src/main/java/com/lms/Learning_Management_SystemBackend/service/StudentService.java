@@ -27,4 +27,8 @@ public class StudentService {
         System.out.println(ss);
         return studentDTO;
     }
+
+    public long getStudentCount() {
+        return studentRepo.count();
+    }
 }

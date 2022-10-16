@@ -31,7 +31,4 @@ public class Course implements Serializable {
 
     private String updated_date;
     private String state;
-
-
-
 }

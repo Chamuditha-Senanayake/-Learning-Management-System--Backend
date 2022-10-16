@@ -21,11 +21,10 @@ public class Enrolment {
     private Course courses;
 
     @ManyToOne
-    @JoinColumn(name = "student_id", referencedColumnName = "studentId")
-    private Student student;
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
 
     private String state;
     private int marks;
     private String note;
-
 }

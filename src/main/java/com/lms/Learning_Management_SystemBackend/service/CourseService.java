@@ -36,4 +36,9 @@ public class CourseService {
     public Course getCourseByCourseId(String courseId){
         return courseRepo.getCourseByCourseId(courseId);
     }
+
+
+//    public CourseDTO getCourseById(String courseId) {
+//        return courseRepo.findCourseByCourseId();
+//    }
 }

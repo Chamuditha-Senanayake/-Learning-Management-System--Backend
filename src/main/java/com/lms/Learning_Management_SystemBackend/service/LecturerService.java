@@ -24,4 +24,7 @@ public class LecturerService {
         return lecturerDTO;
     }
 
+    public long getLecturerCount() {
+        return lecturerRepo.count();
+    }
 }

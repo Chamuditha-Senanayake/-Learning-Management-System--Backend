@@ -18,4 +18,9 @@ public class LecturerController {
         return lecturerService.saveLecturer(lecturerDTO);
     }
 
+    @GetMapping("/getAllLecturerCount")
+    public long getLecturerCount(){
+        return lecturerService.getLecturerCount();
+    }
+
 }

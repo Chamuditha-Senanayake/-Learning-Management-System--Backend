@@ -23,7 +23,6 @@ public class Student implements Serializable {
     @JsonIgnore
     private User userStudent;
 
-    @OneToMany(mappedBy = "student")
-    private Set<Enrolment> enrolment;
+
 
 }

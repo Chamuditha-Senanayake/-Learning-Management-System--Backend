@@ -12,9 +12,9 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @GetMapping("/getStudents")
-    public String getStudent(){
-        return "getStudents Success";
+    @GetMapping("/getAllStudentCount")
+    public long getStudentCount(){
+        return studentService.getStudentCount();
     }
 
     @PostMapping("/saveStudent")
