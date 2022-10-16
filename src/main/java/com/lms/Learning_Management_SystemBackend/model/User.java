@@ -4,17 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Set;
 
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class User {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue
@@ -29,6 +28,9 @@ public class User {
 
     @OneToOne(mappedBy = "userLecturer")
     private Lecturer lecturer;
+
+    @OneToMany(mappedBy = "user")
+    private Set<Enrolment> enrolment;
 
     private String state;
 

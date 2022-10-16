@@ -32,8 +32,14 @@ public class StudentService {
         return studentDTO;
     }
 
+
+    public long getStudentCount() {
+        return studentRepo.count();
+    }
+
     public List<StudentDTO> getAllStudents(){
         List<Student> studentList = studentRepo.findAll();
         return modelMapper.map(studentList, new TypeToken<List<StudentDTO>>(){}.getType());
+
     }
 }

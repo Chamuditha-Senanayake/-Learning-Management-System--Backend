@@ -17,7 +17,7 @@ public class UserDTO {
     private String email;
     private String role;
     private String state;
-    private StudentDTO student;
-    private LecturerDTO lecturer;
+    private Student student;
+    private Lecturer lecturer;
 }
 

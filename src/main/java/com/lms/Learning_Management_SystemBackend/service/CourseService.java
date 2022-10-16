@@ -34,9 +34,17 @@ public class CourseService {
         return modelMapper.map(courseList, new TypeToken<List<CourseDTO>>(){}.getType());
     }
 
+
+
+    public Course getCourseByCourseId(String courseId){
+        return courseRepo.getCourseByCourseId(courseId);
+    }
+
+
     public CourseDTO getCourseById(String courseId){
         Course course = courseRepo.findCourseByCourseId(courseId);
         System.out.println("Course Okayyyyy");
         return modelMapper.map(course,CourseDTO.class);
     }
+
 }

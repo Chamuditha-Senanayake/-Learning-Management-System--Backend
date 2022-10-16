@@ -15,9 +15,16 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+
+    @GetMapping("/getAllStudentCount")
+    public long getStudentCount() {
+        return studentService.getStudentCount();
+    }
+
     @GetMapping("/getStudents")
     public List<StudentDTO> getAllStudents(){
         return studentService.getAllStudents();
+
     }
 //    public String getStudent(){
 //        return "getStudents Success";

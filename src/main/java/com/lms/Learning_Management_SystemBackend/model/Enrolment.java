@@ -13,19 +13,18 @@ import javax.persistence.*;
 public class Enrolment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue
     private int id;
 
     @ManyToOne
     @JoinColumn(name="course_id", referencedColumnName = "courseId")
-    private Course course;
+    private Course courses;
 
     @ManyToOne
-    @JoinColumn(name = "student_id", referencedColumnName = "studentId")
-    private Student student;
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
 
     private String state;
     private int marks;
     private String note;
-
 }
