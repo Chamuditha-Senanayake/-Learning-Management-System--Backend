@@ -10,6 +10,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@ToString
 
 public class Lecturer implements Serializable {
     @Id @GeneratedValue

@@ -1,7 +1,9 @@
 package com.lms.Learning_Management_SystemBackend.service;
 
 import com.lms.Learning_Management_SystemBackend.dto.CourseDTO;
+import com.lms.Learning_Management_SystemBackend.dto.UserDTO;
 import com.lms.Learning_Management_SystemBackend.model.Course;
+import com.lms.Learning_Management_SystemBackend.model.User;
 import com.lms.Learning_Management_SystemBackend.repo.CourseRepo;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -33,12 +35,16 @@ public class CourseService {
     }
 
 
+
     public Course getCourseByCourseId(String courseId){
         return courseRepo.getCourseByCourseId(courseId);
     }
 
 
-//    public CourseDTO getCourseById(String courseId) {
-//        return courseRepo.findCourseByCourseId();
-//    }
+    public CourseDTO getCourseById(String courseId){
+        Course course = courseRepo.findCourseByCourseId(courseId);
+        System.out.println("Course Okayyyyy");
+        return modelMapper.map(course,CourseDTO.class);
+    }
+
 }

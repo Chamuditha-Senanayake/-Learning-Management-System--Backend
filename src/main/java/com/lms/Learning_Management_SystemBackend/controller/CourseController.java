@@ -16,6 +16,11 @@ public class CourseController {
     @Autowired
     private CourseService courseService;
 
+    @GetMapping("/getCourse/{courseId}")
+    public CourseDTO getCourseById(@PathVariable("courseId") String courseId){
+        return courseService.getCourseById(courseId);
+    }
+
     @GetMapping("/getAllCourses")
     public List<CourseDTO> getAllCourse(){
         return courseService.getAllCourses();
@@ -26,8 +31,5 @@ public class CourseController {
         return courseService.saveCourse(courseDTO);
     }
 
-    @GetMapping("/getCourse/{courseId}")
-    public Course getCourseById(@PathVariable("courseId") String courseId){
-        return courseService.getCourseByCourseId(courseId);
-    }
+
 }
